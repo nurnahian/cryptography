@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Cipher{% endblock title %}
+
+{% block body %}
+<h1>Caesar Cipher</h1>
+<!-- <form action="" method="post">
+    {% csrf_token %} -->
+    <div class="row pt-3">
+        <div class="col-md-5">
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Plain Text</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="plain_text"></textarea>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="mt-5">
+                <div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Key</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="key" required></textarea>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-evenly">
+                    <input type="submit"class="btn btn-success" name="encrypt" value="Encrypt">
+                    
+                    <input type="submit"class="btn btn-danger" name="decrypt" value="Decrypt">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Cipher Text</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="cipher_text"></textarea>
+            </div>
+        </div>
+    </div>
+<!-- </form> -->
+{% endblock body %}
