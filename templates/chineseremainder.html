@@ -3,23 +3,21 @@
 {% block title %}Cipher{% endblock title %}
 
 {% block body %}
-<h1>Caesar Cipher</h1>
+<h1>Chinese Remainder</h1>
 
     <div class="row pt-3 m-2">
-        <form action="{% url 'caesarcipherEncrypt' %}" method="post">
+        <form action="{% url 'chineseremaindervalue' %}" method="post">
             {% csrf_token %}
-            <div class="col-md-5">
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Plain Text</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="plain_text"></textarea>
-                </div>
-            </div>
-            <div class="col-md-2">
+            <div class="col-md-6">
                 <div class="mt-5">
                     <div>
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Key</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="key" required></textarea>
+                            <label for="exampleFormControlTextarea1" class="form-label">Mod Value: Ex(m1=5 7 11)</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="key1" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Remainder: Ex(a1=1 1 3)</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="key2" required></textarea>
                         </div>
                     </div>
                     <div class="d-flex justify-content-evenly">
@@ -30,16 +28,15 @@
         </form>
         <div class="col-md-5">
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Cipher Text</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5">{{cipher}}</textarea>
+                <label for="exampleFormControlTextarea1" class="form-label">X Value is:{{chineseremainder}}</label>
             </div>
         </div>
     </div>
 
-<hr>
-
+<!-- <hr> -->
+<!-- 
     <div class="row pt-3 m-2">
-        <form action="{%url 'caesarcipherDecrypt'%}" method="post">
+        <form action="{%url 'substitutionDecrypt'%}" method="post">
             {% csrf_token %}
             <div class="col-md-5">
                 <div class="mb-3">
@@ -67,6 +64,6 @@
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="cipher_text">{{plain}}</textarea>
             </div>
         </div>
-    </div>
+    </div> -->
 
 {% endblock body %}

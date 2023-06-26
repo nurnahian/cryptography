@@ -4,45 +4,119 @@
 
 {% block body %}
 <div class="col-md-6 offset-md-3">
-    <div class="card img-bg">
-        <div class="card-body">
-            <h5 class="card-title">Caesar Cipher Checking</h5>
-            <p class="card-text">The Caesar Cipher technique is one of the earliest and simplest methods of encryption
-                technique. It’s simply
-                a type of substitution cipher, i.e., each letter of a given text is replaced by a letter with a fixed number
-                of positions down the alphabet.</p>
-            <a href="caesarcipher" class="btn btn-primary">Details</a>
-        </div>
-    </div>
-    <div class="card">
+
+    <div class="card m-2">
         <div class="card-body">
             <h5 class="card-title">Caesar Cipher</h5>
             <p class="card-text">The Caesar Cipher technique is one of the earliest and simplest methods of encryption
                 technique. It’s simply
-                a type of substitution cipher, i.e., each letter of a given text is replaced by a letter with a fixed number
+                a type of substitution cipher, i.e., each letter of a given text is replaced by a letter with a fixed
+                number
                 of positions down the alphabet.</p>
-            <a href="#" class="btn btn-primary">Details</a>
+            <a href={% url 'caesarcipher' %} class="btn btn-primary">Details</a>
         </div>
     </div>
-    <div class="card">
+    <div class="card m-2">
         <div class="card-body">
-            <h5 class="card-title">Caesar Cipher</h5>
-            <p class="card-text">The Caesar Cipher technique is one of the earliest and simplest methods of encryption
-                technique. It’s simply
-                a type of substitution cipher, i.e., each letter of a given text is replaced by a letter with a fixed number
-                of positions down the alphabet.</p>
-            <a href="#" class="btn btn-primary">Details</a>
+            <h5 class="card-title">Playfair Cipher</h5>
+            <p class="card-text">The Playfair cipher was the first practical digraph substitution cipher. The scheme was
+                invented in 1854 by Charles Wheatstone but was named after Lord Playfair who promoted the use of the
+                cipher</p>
+            <a href={% url 'playfair' %} class="btn btn-primary">Details</a>
         </div>
     </div>
-    
-    <div class="card">
+
+    <div class="card m-2">
         <div class="card-body">
-            <h5 class="card-title">Caesar Cipher</h5>
-            <p class="card-text">The Caesar Cipher technique is one of the earliest and simplest methods of encryption
-                technique. It’s simply
-                a type of substitution cipher, i.e., each letter of a given text is replaced by a letter with a fixed number
-                of positions down the alphabet.</p>
-            <a href="#" class="btn btn-primary">Details</a>
+            <h5 class="card-title">Vigenere cipher</h5>
+            <p class="card-text">Vigenère cipher, type of substitution cipher used for data encryption in which the
+                original plaintext structure is somewhat concealed in the ciphertext by using several different
+                monoalphabetic substitution ciphers rather than just one; the code key specifies which particular
+                substitution is to be employed</p>
+            <a href={% url 'vigener' %} class="btn btn-primary">Details</a>
+        </div>
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <h5 class="card-title">Columnar Transposition Cipher</h5>
+            <p class="card-text">Transposition cipher, simple data encryption scheme in which plaintext characters are
+                shifted in some regular pattern to form ciphertext.</p>
+            <a href={% url 'transposition' %} class="btn btn-primary">Details</a>
+        </div>
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <h5 class="card-title">Classical substitution cipher</h5>
+            <p class="card-text">Substitution ciphers encrypt the plaintext by swapping each letter or symbol in the
+                plaintext by a different symbol as directed by the key. Perhaps the simplest substitution cipher is the
+                Caesar cipher, named after the man who used it.</p>
+            <a href={% url 'substitution' %} class="btn btn-primary">Details</a>
+        </div>
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <h5 class="card-title">Chinese Remainder Theorem</h5>
+            <p class="card-text">We are given two arrays num[0..k-1] and rem[0..k-1]. In num[0..k-1], every pair is
+                coprime (gcd for every pair is 1). We need to find minimum positive number x such that:
+
+                x % num[0] = rem[0],
+                x % num[1] = rem[1],
+                .......................
+                x % num[k-1] = rem[k-1]
+                Basically, we are given k numbers which are pairwise coprime, and given remainders of these numbers when
+                an unknown number x is divided by them. We need to find the minimum possible value of x that produces
+                given remainders.</p>
+            <a href={% url 'chineseremainder' %} class="btn btn-primary">Details</a>
+        </div>
+    </div>
+    <div class="card m-2">
+        <div class="card-body">
+            <h5 class="card-title">RSA Algorithm (Not complete)</h5>
+            <p class="card-text">RSA algorithm is an asymmetric cryptography algorithm. Asymmetric actually means that
+                it works on two different keys i.e. Public Key and Private Key. As the name describes that the Public
+                Key is given to everyone and the Private key is kept private.</p>
+            <a href={% url 'rsa' %} class="btn btn-primary">Details</a>
+        </div>
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <h5 class="card-title">Fermat’s little theorem</h5>
+            <p class="card-text">Fermat’s little theorem states that if p is a prime number, then for any integer a, the
+                number a p – a is an integer multiple of p.
+
+                Here p is a prime number
+                ap ≡ a (mod p).
+
+            </p>
+            <a href={% url 'fermat' %} class="btn btn-primary">Details</a>
+        </div>
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <h5 class="card-title">Extended Euclidean Algorithm</h5>
+            <p class="card-text">Extended Euclidean algorithm also finds integer coefficients x and y such that: ax + by
+                = gcd(a, b)
+            </p>
+            <a href={% url 'extendedeuclidean' %} class="btn btn-primary">Details</a>
+        </div>
+    </div>
+    <div class="card m-2">
+        <div class="card-body">
+            <h5 class="card-title">Rail Fence Cipher</h5>
+            <p class="card-text">As we’ve seen earlier, the number of columns in rail fence cipher remains equal to the length of plain-text message. And the key corresponds to the number of rails.
+ 
+
+                Hence, rail matrix can be constructed accordingly. Once we’ve got the matrix we can figure-out the spots where texts should be placed (using the same way of moving diagonally up and down alternatively ).
+                Then, we fill the cipher-text row wise. After filling it, we traverse the matrix in zig-zag manner to obtain the original text.
+                Implementation: 
+                Let cipher-text = “GsGsekfrek eoe” , and Key = 3 
+            </p>
+            <a href={% url 'railfence' %} class="btn btn-primary">Details</a>
         </div>
     </div>
 </div>

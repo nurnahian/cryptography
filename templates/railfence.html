@@ -3,10 +3,10 @@
 {% block title %}Cipher{% endblock title %}
 
 {% block body %}
-<h1>Caesar Cipher</h1>
+<h1>Rail Fence Cipher – Encryption and Decryption</h1>
 
     <div class="row pt-3 m-2">
-        <form action="{% url 'caesarcipherEncrypt' %}" method="post">
+        <form action="{% url 'railfenceEncrypt' %}" method="post">
             {% csrf_token %}
             <div class="col-md-5">
                 <div class="mb-3">
@@ -31,7 +31,7 @@
         <div class="col-md-5">
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Cipher Text</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5">{{cipher}}</textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5">{{railfence}}</textarea>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
 <hr>
 
     <div class="row pt-3 m-2">
-        <form action="{%url 'caesarcipherDecrypt'%}" method="post">
+        <form action="{%url 'railfenceDecrypt'%}" method="post">
             {% csrf_token %}
             <div class="col-md-5">
                 <div class="mb-3">
